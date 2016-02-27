@@ -8,7 +8,6 @@ xmlhttp.send(userInput);
 document.getElementById('message_box').value = "";
 displayMessagesNil();
 getData();
-console.log('inside createData');
 };
 
 getData = function(){
@@ -19,9 +18,7 @@ xmlhttp.onreadystatechange = function() {
     var allMessages = JSON.parse(xmlhttp.responseText);
     displayMessages(allMessages);
     editButtonListener();
-    console.log("just before delete button");
     deleteButtonListener();
-    console.log("just after delete button");
   }
 };
 xmlhttp.open("GET", url, true);
@@ -35,7 +32,6 @@ var edit_message = prompt('edit');
 var jsowned = JSON.stringify({message:[messageId,edit_message]});
 xmlhttp.onreadystatechange = function() {
   if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-    console.log("We're in a ready state!!!");
     displayMessagesNil();
     getData();
   }
@@ -47,10 +43,8 @@ xmlhttp.onreadystatechange = function() {
 deleteData = function(messageId) {
   var xmlhttp = new XMLHttpRequest();
   var url = '/json/delete';
-  console.log('delete Data');
   xmlhttp.onreadystatechange = function() {
     if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-      console.log("We're in a ready state!!!");
       displayMessagesNil();
       getData();
     }
@@ -62,7 +56,6 @@ getData();
 };
 
 createButtonListener = function() {
-  console.log('inside create listener');
   var edit = document.getElementById('submit_message');
   edit.addEventListener("click", createData);
 };
@@ -94,9 +87,7 @@ displayMessagesNil = function(){
 
 
 editButtonListener = function() {
-  console.log('inside edit listener');
   editButtonList = document.getElementsByClassName('edits');
-  console.log(editButtonList);
   for(i=0; i<editButtonList.length; i++) {
     editButtonList[i].addEventListener("click", function() {
     updateData(this.id);
@@ -104,9 +95,7 @@ editButtonListener = function() {
 }};
 
 deleteButtonListener = function() {
-  console.log('inside delete listener');
   deleteButtonList = document.getElementsByClassName('deletes');
-  console.log(deleteButtonList);
   for(i=0; i<deleteButtonList.length; i++) {
     deleteButtonList[i].addEventListener("click", function() {
     deleteData(this.id);
