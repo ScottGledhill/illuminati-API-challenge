@@ -14,18 +14,16 @@ class MessageBoard < Sinatra::Base
 
   get '/json/read' do
     messages = Message.all
-    json = JSON.generate(messages)
+    JSON.generate(messages)
   end
 
   post '/json/create' do
-    # message = Message.create
     new_message_content = request.body.read
-    message = Message.create(content: new_message_content)
+    Message.create(content: new_message_content)
   end
 
   post '/json/delete' do
     id = request.body.read
-    p id
     message = Message.get(id)
     message.destroy
   end
@@ -35,22 +33,5 @@ class MessageBoard < Sinatra::Base
     parsed_message = JSON.parse(message)
     the_message = Message.get(parsed_message['message'][0].to_i)
     the_message.update(content: parsed_message['message'][1])
-
-
   end
-
-
-
-
-
-  # post '/' do
-  #   @message = Message.create(content: params[:content])
-  #   redirect to '/'
-  # end
-  #
-  # delete '/' do
-  #   p params
-  #   @message = Message.get(params[:id]).destroy
-  #   redirect '/'
-
 end
