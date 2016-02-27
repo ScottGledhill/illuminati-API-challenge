@@ -8,3 +8,14 @@ body {
   width: 800px;
   margin: 0 auto;
 }
+
+
+#submit_message {
+ color: #FF00FF;
+ font-size: 10;
+ width: 80px;
+ height: 20px;
+ border: black;
+ margin: 0;
+ padding: 10;
+}
