@@ -36,7 +36,7 @@ xmlhttp.onreadystatechange = function() {
     getData();
   }
 };
-  xmlhttp.open("POST", url, true);
+  xmlhttp.open("POST", url, false);
   xmlhttp.send(jsowned);
 };
 
@@ -49,7 +49,7 @@ deleteData = function(messageId) {
       getData();
     }
   };
-xmlhttp.open("POST", url, true);
+xmlhttp.open("POST", url, false);
 xmlhttp.send(messageId);
 displayMessagesNil();
 getData();
