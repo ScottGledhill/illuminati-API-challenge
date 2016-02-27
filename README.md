@@ -1,10 +1,12 @@
 
 RESTful API CHALLENGE
 
+---
+
 * by [Hannah Smyth-Osbourne](https://github.com/HannSO/API-Challenge-.git/)
 * [Scott Gledhill](https://github.com/ScottGledhill/illuminati-API-challenge/)
-* and [Zeshan Rasul](https://github.com/ZeshanRasul/API-Challenge/)
----
+* [Zeshan Rasul](https://github.com/ZeshanRasul/API-Challenge/)
+
 (a messageboard [web app](https://glacial-brook-6196.herokuapp.com/) mvp)
 
 THE CHALLENGE
