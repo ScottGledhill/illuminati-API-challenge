@@ -7,7 +7,6 @@ RESTful API CHALLENGE
 * [Scott Gledhill](https://github.com/ScottGledhill/illuminati-API-challenge/)
 * [Zeshan Rasul](https://github.com/ZeshanRasul/API-Challenge/)
 
-(a messageboard [web app](https://glacial-brook-6196.herokuapp.com/) mvp)
 
 THE CHALLENGE
 ---
