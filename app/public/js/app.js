@@ -51,8 +51,6 @@ deleteData = function(messageId) {
   };
 xmlhttp.open("POST", url, false);
 xmlhttp.send(messageId);
-displayMessagesNil();
-getData();
 };
 
 createButtonListener = function() {

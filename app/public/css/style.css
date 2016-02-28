@@ -1,6 +1,8 @@
 
 body {
   text-align: center;
+  position: relative;
+  background-image: url('img/dnlyvbf.gif');
  }
 
 #page-wrap {
@@ -8,7 +10,6 @@ body {
   width: 800px;
   margin: 0 auto;
 }
-
 
 #submit_message {
  color: #FF00FF;
@@ -18,4 +19,18 @@ body {
  border: black;
  margin: 0;
  padding: 10;
+}
+
+#message_box {
+  position: relative;
+  top: 50%;
+  text-align: center;
+}
+
+#all_messages {
+  color: black;
+  position: relative;
+  top: 50%;
+  text-align: center;
+  border: black;
 }
